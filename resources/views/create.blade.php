@@ -1,4 +1,4 @@
-@extends('layouts.app')
+g@extends('layouts.app')
 
 @section('content')
 
@@ -30,7 +30,7 @@
                                 <label for="body" class="col-md-4 control-label">Body</label>
 
                                 <div class="col-md-6">
-                                    <textarea id="body" class="form-control" name="body" required></textarea>
+                                    <textarea id="body" class="form-control" name="body" required>{{ old('body') }}</textarea>
 
                                     @if ($errors->has('body'))
                                         <span class="help-block">
@@ -44,7 +44,7 @@
                                 <label for="tags" class="col-md-4 control-label">Tags</label>
 
                                 <div class="col-md-6">
-                                    <input type="text" name="tags" id="tags" class="form-control">
+                                    <input type="text" value="{{ old('tags') }}" name="tags" id="tags" class="form-control">
 
                                     @if ($errors->has('tags'))
                                         <span class="help-block">
@@ -57,7 +57,7 @@
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
-                                        Login
+                                        Submit
                                     </button>
                                 </div>
                             </div>
