@@ -10,8 +10,8 @@ class CreateTagGroupsTable extends Migration {
     {
         Schema::create('tagging_tag_groups', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('slug', 255)->index();
-            $table->string('name', 255);
+            $table->string('slug')->index();
+            $table->string('name');
         });
     }
 
